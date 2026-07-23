@@ -1,0 +1,388 @@
+/* ==========================================
+   AURELIN.UZ - Product Detail Page Stylesheet
+   (Inspired by Nextgen Detail UI - Reference Image 2)
+   ========================================== */
+
+.product-detail-section {
+  padding: 32px 0 80px;
+}
+
+.product-detail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 80px;
+}
+
+/* Left: Gallery Component */
+.product-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.main-image-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: var(--bg-surface-elevated);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.main-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnails-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.thumb-item {
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  background: var(--bg-surface-elevated);
+  transition: all var(--transition-fast);
+}
+
+.thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb-item.active,
+.thumb-item:hover {
+  border-color: var(--text-main);
+}
+
+/* Right: Product Meta & Options */
+.product-details-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-tag-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.china-direct-badge {
+  background: var(--accent-gold-light);
+  color: var(--accent-gold);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.product-main-title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+}
+
+.product-detail-price {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 20px;
+}
+
+/* Shipping Timer Pill (Image 2 timer banner) */
+.delivery-timer-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+  background: var(--bg-surface-elevated);
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  margin-bottom: 24px;
+  border: 1px dashed var(--border-color-darker);
+}
+
+.delivery-timer-box strong {
+  color: var(--accent-gold);
+  font-weight: 800;
+}
+
+/* Option Selectors: Sizes & Colors */
+.option-group {
+  margin-bottom: 24px;
+}
+
+.option-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.size-picker {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.size-pill {
+  min-width: 48px;
+  height: 44px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  background: var(--bg-surface);
+  transition: all var(--transition-fast);
+}
+
+.size-pill:hover,
+.size-pill.active {
+  background: var(--text-main);
+  color: var(--bg-surface);
+  border-color: var(--text-main);
+}
+
+/* Add to Cart Actions Row */
+.purchase-actions-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.quantity-stepper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface-elevated);
+}
+
+.step-btn {
+  width: 40px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.qty-val {
+  width: 40px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.btn-add-main {
+  flex-grow: 1;
+  height: 48px;
+  font-size: 15px;
+}
+
+.btn-wishlist {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-wishlist:hover {
+  background: var(--bg-surface-elevated);
+}
+
+/* Accordions (Description & Shipping) */
+.accordion-list {
+  border-top: 1px solid var(--border-color);
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.accordion-body {
+  padding-bottom: 16px;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  display: none;
+}
+
+.accordion-item.active .accordion-body {
+  display: block;
+  animation: fadeIn 0.2s ease;
+}
+
+/* Reviews & Ratings Section (Reference Image 2) */
+.reviews-section {
+  border-top: 1px solid var(--border-color);
+  padding-top: 48px;
+  margin-top: 48px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.rating-overview {
+  text-align: center;
+  padding: 24px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+.rating-big-score {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--text-main);
+}
+
+.rating-big-score span {
+  font-size: 20px;
+  color: var(--text-muted);
+}
+
+.rating-stars {
+  color: var(--accent-gold);
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.reviews-count-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.rating-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.bar-bg {
+  flex-grow: 1;
+  height: 6px;
+  background: var(--bg-surface-elevated);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--text-main);
+  border-radius: 3px;
+}
+
+/* Customer Review Cards */
+.review-cards-carousel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.review-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.review-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.reviewer-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent-gold-light);
+  color: var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.review-date {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.review-text {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .product-detail-container {
+    grid-template-columns: 1fr;
+  }
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  .review-cards-carousel {
+    grid-template-columns: 1fr;
+  }
+}

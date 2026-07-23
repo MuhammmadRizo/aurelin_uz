@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savatcha — Aurelin.uz</title>
+  <meta name="description" content="Aurelin.uz savatchasi: Buyurtmani rasmiylashtirish, manzil kiritish va Telegram orqali xarid qilish.">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .cart-layout {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 40px;
+      margin: 40px 0 96px;
+    }
+    .cart-items-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+    }
+    .cart-items-table th, .cart-items-table td {
+      padding: 18px 24px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .cart-items-table th {
+      background: var(--bg-elevated);
+      font-family: var(--font-heading);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+    }
+    .cart-item-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .cart-item-thumb {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      background: var(--bg-elevated);
+    }
+    .checkout-summary-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 28px;
+      position: sticky;
+      top: 100px;
+      box-shadow: var(--shadow-md);
+    }
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+    .summary-row.total {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 800;
+      border-top: 1px dashed var(--border-subtle);
+      padding-top: 16px;
+      margin-top: 16px;
+    }
+    @media (max-width: 900px) {
+      .cart-layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Animated Infinite Marquee Banner -->
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <div class="marquee-item">🇨🇳 DIRECT CHINA FACTORY PRICING <span class="highlight">✦</span></div>
+      <div class="marquee-item">100% PREMIUM QUALITY CONTROL <span class="highlight">✦</span></div>
+      <div class="marquee-item">EXPRESS SHIPPING ACROSS UZBEKISTAN <span class="highlight">✦</span></div>
+      <div class="marquee-item">NEW SEASON HAUTE & STREETWEAR 2026 <span class="highlight">✦</span></div>
+      <div class="marquee-item">🇨🇳 DIRECT CHINA FACTORY PRICING <span class="highlight">✦</span></div>
+      <div class="marquee-item">100% PREMIUM QUALITY CONTROL <span class="highlight">✦</span></div>
+      <div class="marquee-item">EXPRESS SHIPPING ACROSS UZBEKISTAN <span class="highlight">✦</span></div>
+      <div class="marquee-item">NEW SEASON HAUTE & STREETWEAR 2026 <span class="highlight">✦</span></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          AURELIN<span class="dot">.</span>UZ
+          <span class="logo-tag">China Direct</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="navHome">Bosh sahifa</a></li>
+          <li><a href="shop.html" class="nav-link" data-i18n="navShop">Do'kon</a></li>
+          <li><a href="product-detail.html" class="nav-link" data-i18n="navProducts">Kiyimlar</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="navAbout">Biz haqimizda</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="navContact">Aloqa</a></li>
+        </ul>
+
+        <div class="nav-controls">
+          <div class="lang-selector">
+            <button class="lang-btn" aria-label="Change Language">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              <span class="current-lang-text">UZ</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="lang-dropdown">
+              <div class="lang-option selected" data-lang="uz" onclick="changeAurelinLang('uz')">🇺🇿 O'zbekcha</div>
+              <div class="lang-option" data-lang="ru" onclick="changeAurelinLang('ru')">🇷🇺 Русский</div>
+              <div class="lang-option" data-lang="en" onclick="changeAurelinLang('en')">🇬🇧 English</div>
+            </div>
+          </div>
+
+          <button class="theme-toggle-btn" aria-label="Toggle Dark Light Mode"></button>
+
+          <button class="icon-btn search-trigger-btn" aria-label="Search">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+
+          <a href="cart.html" class="icon-btn" aria-label="Shopping Cart">
+            <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            <span class="badge-count cart-count-badge">0</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div style="margin-top: 40px;">
+      <h1 style="font-family: var(--font-heading); font-size: 36px; font-weight: 800;" data-i18n="cartTitle">Xarid Savatchangiz</h1>
+    </div>
+
+    <div class="cart-layout">
+      <!-- Items Table -->
+      <div>
+        <table class="cart-items-table">
+          <thead>
+            <tr>
+              <th>Mahsulot</th>
+              <th>Narxi</th>
+              <th>Soni</th>
+              <th>Jami</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="cart-table-body">
+            <!-- Dynamic items rendered by cart.js -->
+          </tbody>
+        </table>
+
+        <!-- Order Form -->
+        <div style="background: var(--bg-card); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); margin-top: 28px;">
+          <h3 style="font-family: var(--font-heading); font-size: 20px; font-weight: 800; margin-bottom: 20px;">Mijoz Ma'lumotlari</h3>
+          <form id="checkout-form" onsubmit="handleAurelinCheckout(event)">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+              <input type="text" placeholder="Ismingiz" required style="background: var(--bg-elevated); padding: 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+              <input type="tel" placeholder="+998 (90) 123-45-67" required style="background: var(--bg-elevated); padding: 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+            </div>
+            <div style="margin-bottom: 16px;">
+              <input type="text" placeholder="Yetkazib berish manzili (Viloyat, shahar, ko'cha)" required style="width: 100%; background: var(--bg-elevated); padding: 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+            </div>
+            <div style="margin-bottom: 24px;">
+              <label style="font-size: 13px; font-weight: 700; color: var(--text-muted);">To'lov Usuli:</label>
+              <div style="display: flex; gap: 16px; margin-top: 10px;">
+                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 14px; font-weight: 600;">
+                  <input type="radio" name="paymethod" checked> Uzcard / Humo (Payme/Click)
+                </label>
+                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 14px; font-weight: 600;">
+                  <input type="radio" name="paymethod"> Naqd (Kuryerga yetkazilgach)
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 15px;" data-i18n="checkoutBtn">
+              Buyurtmani Tasdiqlash
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <div class="checkout-summary-card">
+        <h3 style="font-family: var(--font-heading); font-size: 20px; font-weight: 800; margin-bottom: 24px;">Buyurtma Xulosasi</h3>
+        <div class="summary-row">
+          <span>Mahsulotlar narxi:</span>
+          <strong id="summary-subtotal">0 UZS</strong>
+        </div>
+        <div class="summary-row">
+          <span data-i18n="shippingCost">Yetkazish xizmati:</span>
+          <span style="color: #10b981; font-weight: 800;" data-i18n="freeShipping">BEPUL</span>
+        </div>
+        <div style="margin: 20px 0;">
+          <div style="display: flex; gap: 8px;">
+            <input type="text" placeholder="Promokod" id="promo-input" style="background: var(--bg-elevated); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); font-size: 13px; flex-grow: 1;">
+            <button class="btn btn-secondary" style="padding: 10px 20px; font-size: 13px;" onclick="applyPromo()">OK</button>
+          </div>
+        </div>
+        <div class="summary-row total">
+          <span data-i18n="cartTotal">Jami:</span>
+          <span id="summary-total-price" style="color: var(--accent-gold);">0 UZS</span>
+        </div>
+
+        <div style="margin-top: 28px;">
+          <button class="btn btn-gold" style="width: 100%; font-size: 13px;" onclick="sendTelegramOrder()">
+            💬 Telegram orqali xarid qilish
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div data-i18n="rightsText">© 2026 Aurelin.uz. Barcha huquqlar himoyalangan. China-Direct Fashion Store.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    function renderCartPage() {
+      const cart = getAurelinCart();
+      const tbody = document.getElementById('cart-table-body');
+      const subtotalElem = document.getElementById('summary-subtotal');
+      const totalElem = document.getElementById('summary-total-price');
+
+      if (!tbody) return;
+
+      if (cart.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="5" style="text-align: center; padding: 48px; color: var(--text-muted);">
+              Savatchangiz bo'sh. <a href="shop.html" style="color: var(--text-primary); font-weight: 800; text-decoration: underline;">Katalogga o'tish &rarr;</a>
+            </td>
+          </tr>
+        `;
+        if (subtotalElem) subtotalElem.textContent = '0 UZS';
+        if (totalElem) totalElem.textContent = '0 UZS';
+        return;
+      }
+
+      let grandTotal = 0;
+      tbody.innerHTML = cart.map(item => {
+        const itemTotal = item.priceUzs * item.quantity;
+        grandTotal += itemTotal;
+
+        return `
+          <tr>
+            <td>
+              <div class="cart-item-row">
+                <img src="${item.image}" class="cart-item-thumb" alt="${item.title}">
+                <div>
+                  <div style="font-family: var(--font-heading); font-weight: 700; font-size: 15px;">${item.title}</div>
+                  <div style="font-size: 12px; color: var(--text-muted);">O'lcham: ${item.size}</div>
+                </div>
+              </div>
+            </td>
+            <td style="font-weight: 700;">${item.priceUzs.toLocaleString()} UZS</td>
+            <td>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <button class="step-btn" style="width: 30px; height: 30px; border-radius: 4px; border: 1px solid var(--border-subtle);" onclick="updateAurelinCartQty('${item.id}', '${item.size}', '${item.color}', ${item.quantity - 1})">-</button>
+                <span style="font-weight: 700;">${item.quantity}</span>
+                <button class="step-btn" style="width: 30px; height: 30px; border-radius: 4px; border: 1px solid var(--border-subtle);" onclick="updateAurelinCartQty('${item.id}', '${item.size}', '${item.color}', ${item.quantity + 1})">+</button>
+              </div>
+            </td>
+            <td style="font-family: var(--font-heading); font-weight: 800; color: var(--text-primary);">${itemTotal.toLocaleString()} UZS</td>
+            <td>
+              <button style="color: #ef4444; font-weight: 800; font-size: 20px;" onclick="removeFromAurelinCart('${item.id}', '${item.size}', '${item.color}')">&times;</button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      if (subtotalElem) subtotalElem.textContent = grandTotal.toLocaleString() + ' UZS';
+      if (totalElem) totalElem.textContent = grandTotal.toLocaleString() + ' UZS';
+    }
+
+    function applyPromo() {
+      const code = document.getElementById('promo-input').value.trim();
+      if (code.toUpperCase() === 'AURELIN15') {
+        alert('Promokod qabul qilindi! 15% chegirma qo\'llandi.');
+      } else {
+        alert('Noto\'g\'ri promokod. Qayta urinib ko\'ring (Masalan: AURELIN15)');
+      }
+    }
+
+    function handleAurelinCheckout(e) {
+      e.preventDefault();
+      alert('Rahmat! Buyurtmangiz qabul qilindi. Menejerimiz tez orada siz bilan bog\'lanadi.');
+      localStorage.removeItem('aurelin_cart_items');
+      window.location.href = 'index.html';
+    }
+
+    function sendTelegramOrder() {
+      const cart = getAurelinCart();
+      if (cart.length === 0) {
+        alert('Savatchangiz bo\'sh!');
+        return;
+      }
+      let text = 'Aurelin.uz orqali yangi buyurtma:%0A';
+      cart.forEach(i => {
+        text += `- ${i.title} (${i.size}) x${i.quantity}: ${(i.priceUzs * i.quantity).toLocaleString()} UZS%0A`;
+      });
+      window.open(`https://t.me/aurelin_uz?text=${text}`, '_blank');
+    }
+
+    window.renderCartPage = renderCartPage;
+    document.addEventListener('DOMContentLoaded', renderCartPage);
+  </script>
+</body>
+</html>

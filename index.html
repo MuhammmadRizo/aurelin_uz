@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" >
+  <title>Aurelin.uz — High-Fashion & China Direct Apparel</title>
+  <meta name="description"
+    content="Aurelin.uz — Xitoyning eng sara fabrikalaridan eksklyuziv kiyim-kechaklar to'plami. Toshkent va O'zbekiston bo'ylab tezkor yetkazib berish.">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/shop.css">
+</head>
+
+<body>
+
+  <!-- Top Animated Infinite Marquee Banner -->
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <div class="marquee-item">🇨🇳 DIRECT CHINA FACTORY PRICING <span class="highlight">✦</span></div>
+      <div class="marquee-item">100% PREMIUM QUALITY CONTROL <span class="highlight">✦</span></div>
+      <div class="marquee-item">EXPRESS SHIPPING ACROSS UZBEKISTAN <span class="highlight">✦</span></div>
+      <div class="marquee-item">NEW SEASON HAUTE & STREETWEAR 2026 <span class="highlight">✦</span></div>
+      <!-- Duplicate for seamless loop -->
+      <div class="marquee-item">🇨🇳 DIRECT CHINA FACTORY PRICING <span class="highlight">✦</span></div>
+      <div class="marquee-item">100% PREMIUM QUALITY CONTROL <span class="highlight">✦</span></div>
+      <div class="marquee-item">EXPRESS SHIPPING ACROSS UZBEKISTAN <span class="highlight">✦</span></div>
+      <div class="marquee-item">NEW SEASON HAUTE & STREETWEAR 2026 <span class="highlight">✦</span></div>
+    </div>
+  </div>
+
+  <!-- Glassmorphism Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          AURELIN<span class="dot">.</span>UZ
+          <span class="logo-tag">China Direct</span>
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active" data-i18n="navHome">Bosh sahifa</a></li>
+          <li><a href="shop.html" class="nav-link" data-i18n="navShop">Do'kon</a></li>
+          <li><a href="product-detail.html" class="nav-link" data-i18n="navProducts">Kiyimlar</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="navAbout">Biz haqimizda</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="navContact">Aloqa</a></li>
+        </ul>
+
+        <!-- Right Control Actions -->
+        <div class="nav-controls">
+          <!-- Language Dropdown Pill -->
+          <div class="lang-selector">
+            <button class="lang-btn" aria-label="Change Language">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                </path>
+              </svg>
+              <span class="current-lang-text">UZ</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="lang-dropdown">
+              <div class="lang-option selected" data-lang="uz" onclick="changeAurelinLang('uz')">🇺🇿 O'zbekcha</div>
+              <div class="lang-option" data-lang="ru" onclick="changeAurelinLang('ru')">🇷🇺 Русский</div>
+              <div class="lang-option" data-lang="en" onclick="changeAurelinLang('en')">🇬🇧 English</div>
+            </div>
+          </div>
+
+          <!-- Theme Switcher Button -->
+          <button class="theme-toggle-btn" aria-label="Toggle Dark Light Mode"></button>
+
+          <!-- Search Button -->
+          <button class="icon-btn search-trigger-btn" aria-label="Search">
+            <svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <!-- Shopping Cart Icon Badge -->
+          <a href="cart.html" class="icon-btn" aria-label="Shopping Cart">
+            <svg viewBox="0 0 24 24">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="badge-count cart-count-badge">0</span>
+          </a>
+
+          <!-- Mobile Toggle -->
+          <button class="mobile-toggle" aria-label="Toggle Mobile Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- High-Impact Hero Showcase Section -->
+    <section class="hero-wrapper">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Hero Text Content -->
+          <div class="hero-content">
+            <div
+              style="display: inline-flex; align-items: center; gap: 8px; background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 6px 16px; border-radius: var(--radius-pill); font-size: 12px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 24px; box-shadow: var(--shadow-sm);">
+              <span style="color: var(--accent-gold);">⚡ NEW ARRIVALS 2026</span>
+              <span style="opacity: 0.3;">|</span>
+              <span data-i18n="heroSubtitle">XITOYDAN TO'G'RIDAN-TO'G'RI IMPORT</span>
+            </div>
+
+            <h1>
+              Eksklyuziv <span class="gradient-text">Kiyimlar</span> va Zamonaviy Stil.
+            </h1>
+
+            <p data-i18n="heroDesc">
+              Aurelin.uz - Xitoyning eng sara kiyim-kechak fabrikalaridan to'g'ridan-to'g'ri keltirilgan sifatli va
+              qulay kiyimlar to'plami. Uyingizga yetkazib beramiz!
+            </p>
+
+            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+              <a href="shop.html" class="btn btn-primary" data-i18n="heroShopBtn">
+                Kolleksiyani ko'rish &rarr;
+              </a>
+              <a href="about.html" class="btn btn-secondary" data-i18n="heroAboutBtn">
+                Biz haqimizda
+              </a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="hero-stats">
+              <div class="stat-item">
+                <h4>10,000+</h4>
+                <p>Mijozlarimiz</p>
+              </div>
+              <div class="stat-item">
+                <h4>100%</h4>
+                <p>Fabrika Sifati</p>
+              </div>
+              <div class="stat-item">
+                <h4>1-3 Kun</h4>
+                <p>Express Yetkazish</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Image Card Stack -->
+          <div class="hero-card-stack">
+            <div class="hero-main-card">
+              <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=80"
+                alt="Aurelin Fashion Model">
+
+              <!-- Floating Glass Card Overlay -->
+              <div class="hero-floating-glass">
+                <div>
+                  <div style="font-family: var(--font-heading); font-size: 18px; font-weight: 800;">Haute Outerwear 2026
+                  </div>
+                  <div style="font-size: 13px; color: var(--text-secondary);">Direct Factory Shipment to Tashkent</div>
+                </div>
+                <a href="product-detail.html" class="btn btn-gold"
+                  style="padding: 10px 20px; font-size: 12px;">Ko'rish</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Category Highlights Grid -->
+    <section
+      style="padding: 64px 0; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); background: var(--bg-card);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">CATEGORIES</span>
+          <h2 class="section-title">Aurelin Kiyim To'plamlari</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+          <a href="shop.html"
+            style="position: relative; height: 320px; border-radius: var(--radius-md); overflow: hidden; display: flex; align-items: flex-end; padding: 24px; color: #fff;">
+            <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=600&q=80"
+              alt="Erkaklar"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);">
+            </div>
+            <div style="position: relative; z-index: 2;">
+              <div style="font-family: var(--font-heading); font-size: 22px; font-weight: 800;" data-i18n="catMen">
+                Erkaklar kiyimi</div>
+              <span
+                style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--accent-gold);">Ko'rish
+                &rarr;</span>
+            </div>
+          </a>
+
+          <a href="shop.html"
+            style="position: relative; height: 320px; border-radius: var(--radius-md); overflow: hidden; display: flex; align-items: flex-end; padding: 24px; color: #fff;">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80"
+              alt="Ayollar"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);">
+            </div>
+            <div style="position: relative; z-index: 2;">
+              <div style="font-family: var(--font-heading); font-size: 22px; font-weight: 800;" data-i18n="catWomen">
+                Ayollar kiyimi</div>
+              <span
+                style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--accent-gold);">Ko'rish
+                &rarr;</span>
+            </div>
+          </a>
+
+          <a href="shop.html"
+            style="position: relative; height: 320px; border-radius: var(--radius-md); overflow: hidden; display: flex; align-items: flex-end; padding: 24px; color: #fff;">
+            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80"
+              alt="Xudi"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);">
+            </div>
+            <div style="position: relative; z-index: 2;">
+              <div style="font-family: var(--font-heading); font-size: 22px; font-weight: 800;" data-i18n="catHoodies">
+                Xudi & Svitshotlar</div>
+              <span
+                style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--accent-gold);">Ko'rish
+                &rarr;</span>
+            </div>
+          </a>
+
+          <a href="shop.html"
+            style="position: relative; height: 320px; border-radius: var(--radius-md); overflow: hidden; display: flex; align-items: flex-end; padding: 24px; color: #fff;">
+            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80"
+              alt="Kurtka"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);">
+            </div>
+            <div style="position: relative; z-index: 2;">
+              <div style="font-family: var(--font-heading); font-size: 22px; font-weight: 800;" data-i18n="catJackets">
+                Kurtka & Palto</div>
+              <span
+                style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--accent-gold);">Ko'rish
+                &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best Sellers Product Grid Section -->
+    <section style="padding: 96px 0;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">BESTSELLERS</span>
+          <h2 class="section-title">Ommabop Kiyimlar Katalogi</h2>
+        </div>
+
+        <div class="product-grid">
+          <!-- Item 1 -->
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <div class="card-badges">
+                <span class="badge-tag china">Direct China</span>
+              </div>
+              <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80"
+                alt="Suede Jacket">
+              <div class="card-quick-actions">
+                <a href="product-detail.html" class="quick-action-btn" title="View Details">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-cat" data-i18n="catJackets">Kurtka & Palto</span>
+              <h3 class="product-title"><a href="product-detail.html">Suede Zip Shirt Cut II</a></h3>
+              <div class="color-swatches">
+                <span class="swatch-dot swatch-brown active"></span>
+                <span class="swatch-dot swatch-blue"></span>
+                <span class="swatch-dot swatch-grey"></span>
+              </div>
+              <div class="price-row">
+                <div class="price-box">
+                  <span class="price-uzs">420,000 UZS</span>
+                  <span class="price-usd">$36.00</span>
+                </div>
+                <button class="cart-add-btn"
+                  onclick="addToAurelinCart({id:'p1', title:'Suede Zip Shirt Cut II', priceUzs:420000, image:'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80'})"
+                  data-i18n="addToCart">+ Savat</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <div class="card-badges">
+                <span class="badge-tag sale">-20% SALE</span>
+              </div>
+              <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80"
+                alt="Loose Fit Hoodie">
+              <div class="card-quick-actions">
+                <a href="product-detail.html" class="quick-action-btn" title="View Details">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-cat" data-i18n="catHoodies">Xudi & Svitshotlar</span>
+              <h3 class="product-title"><a href="product-detail.html">Loose Fit Burgundy Hoodie</a></h3>
+              <div class="color-swatches">
+                <span class="swatch-dot swatch-red active"></span>
+                <span class="swatch-dot swatch-black"></span>
+                <span class="swatch-dot swatch-grey"></span>
+              </div>
+              <div class="price-row">
+                <div class="price-box">
+                  <span class="price-uzs">310,000 UZS</span>
+                  <span class="price-usd">$24.99</span>
+                </div>
+                <button class="cart-add-btn"
+                  onclick="addToAurelinCart({id:'p2', title:'Loose Fit Burgundy Hoodie', priceUzs:310000, image:'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80'})"
+                  data-i18n="addToCart">+ Savat</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <div class="card-badges">
+                <span class="badge-tag china">Direct China</span>
+              </div>
+              <img src="https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?auto=format&fit=crop&w=600&q=80"
+                alt="Biker Jacket">
+              <div class="card-quick-actions">
+                <a href="product-detail.html" class="quick-action-btn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-cat" data-i18n="catWomen">Ayollar kiyimi</span>
+              <h3 class="product-title"><a href="product-detail.html">Cropped Leather Biker Jacket</a></h3>
+              <div class="color-swatches">
+                <span class="swatch-dot swatch-black active"></span>
+                <span class="swatch-dot swatch-grey"></span>
+              </div>
+              <div class="price-row">
+                <div class="price-box">
+                  <span class="price-uzs">490,000 UZS</span>
+                  <span class="price-usd">$42.00</span>
+                </div>
+                <button class="cart-add-btn"
+                  onclick="addToAurelinCart({id:'p3', title:'Cropped Leather Biker Jacket', priceUzs:490000, image:'https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?auto=format&fit=crop&w=600&q=80'})"
+                  data-i18n="addToCart">+ Savat</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=600&q=80"
+                alt="Knit Polo">
+              <div class="card-quick-actions">
+                <a href="product-detail.html" class="quick-action-btn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-cat" data-i18n="catMen">Erkaklar kiyimi</span>
+              <h3 class="product-title"><a href="product-detail.html">Soft Cotton Knit Polo Sweater</a></h3>
+              <div class="color-swatches">
+                <span class="swatch-dot swatch-blue active"></span>
+                <span class="swatch-dot swatch-beige"></span>
+              </div>
+              <div class="price-row">
+                <div class="price-box">
+                  <span class="price-uzs">240,000 UZS</span>
+                  <span class="price-usd">$19.50</span>
+                </div>
+                <button class="cart-add-btn"
+                  onclick="addToAurelinCart({id:'p4', title:'Soft Cotton Knit Polo Sweater', priceUzs:240000, image:'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=600&q=80'})"
+                  data-i18n="addToCart">+ Savat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 56px;">
+          <a href="shop.html" class="btn btn-outline" style="padding: 16px 48px;" data-i18n="heroShopBtn">Barcha
+            kiyimlarni ko'rish &rarr;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">AURELIN<span class="dot">.</span>UZ</a>
+          <p data-i18n="heroDesc">Aurelin.uz - Xitoyning eng sara kiyim-kechak fabrikalaridan to'g'ridan-to'g'ri
+            keltirilgan sifatli va qulay kiyimlar to'plami.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title" data-i18n="navShop">Do'kon</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html" data-i18n="catMen">Erkaklar kiyimi</a></li>
+            <li><a href="shop.html" data-i18n="catWomen">Ayollar kiyimi</a></li>
+            <li><a href="shop.html" data-i18n="catHoodies">Xudi & Svitshotlar</a></li>
+            <li><a href="shop.html" data-i18n="catJackets">Kurtka & Palto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title" data-i18n="navAbout">Biz haqimizda</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Aurelin Tarixi</a></li>
+            <li><a href="about.html">Xitoy Fabrikalari</a></li>
+            <li><a href="contact.html">Yetkazib berish</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title" data-i18n="navContact">Aloqa</h4>
+          <ul class="footer-links">
+            <li>📍 Toshkent sh., Chilonzor t.</li>
+            <li>📱 +998 (90) 123-45-67</li>
+            <li>💬 Telegram: @aurelin_uz</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n="rightsText">© 2026 Aurelin.uz. Barcha huquqlar himoyalangan. China-Direct Fashion Store.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
