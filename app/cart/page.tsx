@@ -45,7 +45,7 @@ export default function CartPage() {
                 <div key={item.id} className="py-6 flex space-x-6">
                   <div className="relative w-24 h-32 bg-[#EAE7DF] border border-[#D9D6CF] shrink-0 overflow-hidden">
                     <Image
-                      src={item.product.image}
+                      src={item.selectedImage || item.product.image}
                       alt={item.product.name}
                       fill
                       sizes="96px"

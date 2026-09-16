@@ -9,7 +9,7 @@ interface CartContextType {
   openCart: () => void;
   closeCart: () => void;
   toggleCart: () => void;
-  addItem: (product: Product, size: string, quantity?: number) => void;
+  addItem: (product: Product, size: string, quantity?: number, selectedImage?: string) => void;
   removeItem: (itemId: string) => void;
   updateQuantity: (itemId: string, quantity: number) => void;
   clearCart: () => void;
@@ -47,8 +47,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const closeCart = () => setIsOpen(false);
   const toggleCart = () => setIsOpen((prev) => !prev);
 
-  const addItem = (product: Product, size: string, quantity = 1) => {
-    const itemId = `${product.id}-${size}`;
+  const addItem = (product: Product, size: string, quantity = 1, selectedImage?: string) => {
+    const chosenImage = selectedImage || product.image;
+    const itemId = `${product.id}-${size}-${chosenImage}`;
     setItems((prevItems) => {
       const existing = prevItems.find((item) => item.id === itemId);
       if (existing) {
@@ -65,6 +66,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
           product,
           size,
           quantity,
+          selectedImage: chosenImage,
         },
       ];
     });

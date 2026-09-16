@@ -26,7 +26,8 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
   const [isAdded, setIsAdded] = useState<boolean>(false);
 
   const handleAddToCart = () => {
-    addItem(product, selectedSize, quantity);
+    const chosenImage = galleryImages[selectedImage] || product.image;
+    addItem(product, selectedSize, quantity, chosenImage);
     setIsAdded(true);
     setTimeout(() => setIsAdded(false), 2000);
   };
@@ -230,7 +231,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
             </div>
             <div className="flex items-center space-x-2">
               <ShieldCheck className="w-4 h-4 text-[#111111]" />
-              <span>CHIKAGO STUDIYASI ORIGINAL MAHSULOTI</span>
+              <span>XITOYDAN ORIGINAL MAHSULOTLAR</span>
             </div>
           </div>
         </div>
