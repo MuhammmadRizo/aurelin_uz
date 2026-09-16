@@ -1,22 +1,22 @@
-export type Language = 'uz' | 'ru' | 'en';
-export type Theme = 'light' | 'dark';
-
 export interface Product {
   id: string;
-  title: string;
-  category: string;
-  priceUzs: number;
-  priceUsd: number;
-  badge?: string;
-  badgeType?: 'china' | 'sale';
-  color?: string;
+  slug: string;
+  name: string;
+  category: 'Svtishertlar' | 'Futbolkalar' | 'Ustki kiyimlar' | string;
+  price: number;
   image: string;
-  size?: string;
-  quantity?: number;
+  gallery?: string[];
+  description: string;
+  details?: string[];
+  composition?: string;
+  sizes: string[];
+  featured?: boolean;
+  label?: string;
 }
 
-export interface CartItem extends Product {
+export interface CartItem {
+  id: string;
+  product: Product;
   size: string;
-  color: string;
   quantity: number;
 }

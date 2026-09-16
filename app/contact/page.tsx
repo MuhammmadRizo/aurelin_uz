@@ -1,63 +1,93 @@
-'use client';
-
 import React from 'react';
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import PageTransition from '@/components/PageTransition';
+import { ArrowLeft, Mail, MapPin } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Bog‘lanish va Studiya',
+  description: 'Schaubletes Clothing & Co. Chikago studiyasi bilan bog‘lanish.',
+};
 
 export default function ContactPage() {
   return (
-    <main style={{ padding: '80px 0 112px' }}>
-      <div className="container">
-        <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 56px' }}>
-          <span className="section-tag">SUPPORT & INQUIRIES</span>
-          <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: '42px', fontWeight: 800, marginBottom: '16px' }}>Biz Bilan Bog'laning</h1>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '16px' }}>Savollaringiz bormi? Telegram qo'llab-quvvatlash markazimiz 24/7 xizmatingizda!</p>
+    <PageTransition className="w-full py-16 sm:py-24">
+      <div className="w-full max-w-4xl mx-auto px-6 sm:px-10">
+        <div className="pb-8 mb-8 border-b border-[#D9D6CF]">
+          <Link
+            href="/"
+            className="inline-flex items-center space-x-2 text-[11px] font-mono tracking-[0.2em] text-[#777777] hover:text-[#111111] uppercase transition-colors"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span>ARXIVGA QAYTISH</span>
+          </Link>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '48px' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            <div style={{ background: 'var(--bg-card)', padding: '28px', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)', display: 'flex', alignItems: 'center', gap: '20px', boxShadow: 'var(--shadow-sm)' }}>
-              <div style={{ width: '52px', height: '52px', borderRadius: '50%', background: '#0088cc15', color: '#0088cc', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '22px' }}>💬</div>
+        <div className="space-y-6 pb-12 border-b border-[#D9D6CF]">
+          <span className="text-[11px] font-mono tracking-[0.3em] text-[#777777] uppercase">
+            BOG‘LANISH
+          </span>
+          <h1 className="text-4xl sm:text-6xl font-bold tracking-[0.08em] text-[#111111] uppercase">
+            CHIKAGO STUDIYASI
+          </h1>
+          <p className="text-[14px] text-[#777777] max-w-xl leading-relaxed">
+            Kiyim relizlari, bichim xususiyatlari, buyurtmalarni yetkazish yoki
+            hamkorlik loyihalari bo‘yicha murojaat qiling.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 py-12">
+          <div className="space-y-6">
+            <div className="flex items-start space-x-4">
+              <Mail className="w-5 h-5 text-[#111111] mt-1 shrink-0" />
               <div>
-                <div style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px' }}>Telegram Qo'llab-quvvatlash</div>
-                <a href="https://t.me/aurelin_uz" target="_blank" rel="noreferrer" style={{ fontFamily: 'var(--font-heading)', fontSize: '18px', fontWeight: 800, color: '#0088cc' }}>@aurelin_uz</a>
+                <span className="text-[10px] font-mono tracking-widest text-[#777777] uppercase block mb-1">
+                  ELEKTRON POCHTA
+                </span>
+                <a
+                  href="mailto:orders@schaubletes.com"
+                  className="text-[14px] font-mono font-medium text-[#111111] hover:underline uppercase block"
+                >
+                  ORDERS@SCHAUBLETES.COM
+                </a>
+                <a
+                  href="mailto:studio@schaubletes.com"
+                  className="text-[14px] font-mono font-medium text-[#111111] hover:underline uppercase block mt-1"
+                >
+                  STUDIO@SCHAUBLETES.COM
+                </a>
               </div>
             </div>
 
-            <div style={{ background: 'var(--bg-card)', padding: '28px', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)', display: 'flex', alignItems: 'center', gap: '20px', boxShadow: 'var(--shadow-sm)' }}>
-              <div style={{ width: '52px', height: '52px', borderRadius: '50%', background: '#e1306c15', color: '#e1306c', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '22px' }}>📸</div>
+            <div className="flex items-start space-x-4 pt-4">
+              <MapPin className="w-5 h-5 text-[#111111] mt-1 shrink-0" />
               <div>
-                <div style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px' }}>Instagram Sahifamiz</div>
-                <a href="https://instagram.com/aurelin.uz" target="_blank" rel="noreferrer" style={{ fontFamily: 'var(--font-heading)', fontSize: '18px', fontWeight: 800, color: '#e1306c' }}>@aurelin.uz</a>
-              </div>
-            </div>
-
-            <div style={{ background: 'var(--bg-card)', padding: '28px', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)', display: 'flex', alignItems: 'center', gap: '20px', boxShadow: 'var(--shadow-sm)' }}>
-              <div style={{ width: '52px', height: '52px', borderRadius: '50%', background: 'var(--bg-elevated)', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '22px' }}>📱</div>
-              <div>
-                <div style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px' }}>Telefon Raqamimiz</div>
-                <div style={{ fontFamily: 'var(--font-heading)', fontSize: '18px', fontWeight: 800 }}>+998 (90) 123-45-67</div>
+                <span className="text-[10px] font-mono tracking-widest text-[#777777] uppercase block mb-1">
+                  USTAXONA VA ARXIV
+                </span>
+                <span className="text-[14px] text-[#111111] uppercase font-mono block">
+                  WEST LOOP, CHIKAGO, ILLINOYS, AQSH
+                </span>
+                <span className="text-[11px] text-[#777777] font-mono block mt-1">
+                  SHAXSIY TASHRIFLAR FAQAT OLDINDAN YOZILISH ORQALI
+                </span>
               </div>
             </div>
           </div>
 
-          <div style={{ background: 'var(--bg-card)', padding: '40px', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-md)' }}>
-            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '22px', fontWeight: 800, marginBottom: '24px' }}>Xabar qoldiring</h3>
-            <form onSubmit={(e: React.FormEvent) => { e.preventDefault(); alert('Xabaringiz yuborildi! Rahmat.'); }}>
-              <div style={{ marginBottom: '16px' }}>
-                <input type="text" placeholder="Ismingiz" required style={{ width: '100%', background: 'var(--bg-elevated)', padding: '14px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-subtle)' }} />
-              </div>
-              <div style={{ marginBottom: '16px' }}>
-                <input type="tel" placeholder="Telefon raqamingiz" required style={{ width: '100%', background: 'var(--bg-elevated)', padding: '14px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-subtle)' }} />
-              </div>
-              <div style={{ marginBottom: '24px' }}>
-                <textarea rows={4} placeholder="Xabaringiz yoki savolingiz..." required style={{ width: '100%', background: 'var(--bg-elevated)', padding: '14px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-subtle)', resize: 'vertical' }}></textarea>
-              </div>
-              <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '16px' }}>
-                Xabarni Yuborish &rarr;
-              </button>
-            </form>
+          <div className="p-8 border border-[#D9D6CF] bg-[#EAE7DF]/40 space-y-4">
+            <span className="text-[11px] font-mono tracking-widest text-[#111111] uppercase block">
+              MATBUOT VA ULGURJI HAMKORLIK
+            </span>
+            <p className="text-[12px] text-[#555555] leading-relaxed">
+              Biz sifatli to‘qima va minimalistik ko‘cha modasiga bo‘lgan qarashlarimizni baham ko‘radigan mustaqil butiklar bilan hamkorlik qilamiz.
+            </p>
+            <div className="pt-2 text-[11px] font-mono tracking-widest text-[#111111] uppercase">
+              JAVOB BERISH MUDDATI: 24–48 SOAT
+            </div>
           </div>
         </div>
       </div>
-    </main>
+    </PageTransition>
   );
 }

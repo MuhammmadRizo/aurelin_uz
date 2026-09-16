@@ -1,129 +1,146 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useCart } from '@/context/CartContext';
-import { useLanguage } from '@/context/LanguageContext';
+import { formatPrice } from '@/lib/utils';
+import Button from '@/components/Button';
+import PageTransition from '@/components/PageTransition';
+import { Minus, Plus, ShoppingBag, ArrowRight } from 'lucide-react';
 
 export default function CartPage() {
-  const { cart, updateQuantity, removeFromCart, totalPriceUzs, clearCart } = useCart();
-  const { t } = useLanguage();
-
-  const handleCheckout = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert('Rahmat! Buyurtmangiz qabul qilindi. Menejerimiz tez orada siz bilan bog\'lanadi.');
-    clearCart();
-    window.location.href = '/';
-  };
-
-  const handleTelegramOrder = () => {
-    if (cart.length === 0) {
-      alert('Savatchangiz bo\'sh!');
-      return;
-    }
-    let text = 'Aurelin.uz orqali yangi buyurtma:%0A';
-    cart.forEach((i) => {
-      text += `- ${i.title} (${i.size}) x${i.quantity}: ${(i.priceUzs * i.quantity).toLocaleString()} UZS%0A`;
-    });
-    window.open(`https://t.me/aurelin_uz?text=${text}`, '_blank');
-  };
+  const { items, removeItem, updateQuantity, subtotal, totalCount, openCart } = useCart();
 
   return (
-    <div className="container">
-      <div style={{ marginTop: '40px' }}>
-        <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: '36px', fontWeight: 800 }}>{t('cartTitle')}</h1>
-      </div>
-
-      <div className="cart-layout">
-        <div>
-          <table className="cart-items-table">
-            <thead>
-              <tr>
-                <th>Mahsulot</th>
-                <th>Narxi</th>
-                <th>Soni</th>
-                <th>Jami</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {cart.length === 0 ? (
-                <tr>
-                  <td colSpan={5} style={{ textAlign: 'center', padding: '48px', color: 'var(--text-muted)' }}>
-                    {t('cartEmptyMsg')}. <Link href="/shop" style={{ color: 'var(--text-primary)', fontWeight: 800, textDecoration: 'underline' }}>Katalogga o'tish &rsaquo;</Link>
-                  </td>
-                </tr>
-              ) : (
-                cart.map((item) => (
-                  <tr key={`${item.id}-${item.size}-${item.color}`}>
-                    <td>
-                      <div className="cart-item-row">
-                        <img src={item.image} className="cart-item-thumb" alt={item.title} />
-                        <div>
-                          <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '15px' }}>{item.title}</div>
-                          <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>O'lcham: {item.size}</div>
-                        </div>
-                      </div>
-                    </td>
-                    <td style={{ fontWeight: 700 }}>{item.priceUzs.toLocaleString()} UZS</td>
-                    <td>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                        <button className="step-btn" style={{ width: '30px', height: '30px', borderRadius: '4px', border: '1px solid var(--border-subtle)' }} onClick={() => updateQuantity(item.id, item.size, item.color, item.quantity - 1)}>-</button>
-                        <span style={{ fontWeight: 700 }}>{item.quantity}</span>
-                        <button className="step-btn" style={{ width: '30px', height: '30px', borderRadius: '4px', border: '1px solid var(--border-subtle)' }} onClick={() => updateQuantity(item.id, item.size, item.color, item.quantity + 1)}>+</button>
-                      </div>
-                    </td>
-                    <td style={{ fontFamily: 'var(--font-heading)', fontWeight: 800 }}>{(item.priceUzs * item.quantity).toLocaleString()} UZS</td>
-                    <td>
-                      <button style={{ color: '#ef4444', fontWeight: 800, fontSize: '20px' }} onClick={() => removeFromCart(item.id, item.size, item.color)}>&times;</button>
-                    </td>
-                  </tr>
-                ))
-              )}
-            </tbody>
-          </table>
-
-          {/* Checkout Form */}
-          <div style={{ background: 'var(--bg-card)', padding: '32px', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)', marginTop: '28px' }}>
-            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '20px', fontWeight: 800, marginBottom: '20px' }}>Mijoz Ma'lumotlari</h3>
-            <form onSubmit={handleCheckout}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px' }}>
-                <input type="text" placeholder="Ismingiz" required style={{ background: 'var(--bg-elevated)', padding: '14px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-subtle)' }} />
-                <input type="tel" placeholder="+998 (90) 123-45-67" required style={{ background: 'var(--bg-elevated)', padding: '14px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-subtle)' }} />
-              </div>
-              <div style={{ marginBottom: '16px' }}>
-                <input type="text" placeholder="Yetkazib berish manzili (Viloyat, shahar, ko'cha)" required style={{ width: '100%', background: 'var(--bg-elevated)', padding: '14px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-subtle)' }} />
-              </div>
-              <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '16px', fontSize: '15px' }}>
-                {t('checkoutBtn')}
-              </button>
-            </form>
-          </div>
+    <PageTransition className="w-full py-16 sm:py-24">
+      <div className="w-full max-w-5xl mx-auto px-6 sm:px-10">
+        <div className="border-b border-[#D9D6CF] pb-6 flex items-baseline justify-between">
+          <h1 className="text-3xl sm:text-5xl font-bold tracking-[0.08em] text-[#111111] uppercase">
+            XARID SAVATI
+          </h1>
+          <span className="text-[12px] font-mono tracking-widest text-[#777777] uppercase">
+            [{totalCount} TA MAHSULOT]
+          </span>
         </div>
 
-        {/* Summary Card */}
-        <div className="checkout-summary-card">
-          <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '20px', fontWeight: 800, marginBottom: '24px' }}>Buyurtma Xulosasi</h3>
-          <div className="summary-row">
-            <span>Mahsulotlar narxi:</span>
-            <strong>{totalPriceUzs.toLocaleString()} UZS</strong>
+        {items.length === 0 ? (
+          <div className="py-24 text-center space-y-4">
+            <ShoppingBag className="w-10 h-10 text-[#777777] stroke-[1] mx-auto" />
+            <p className="text-[13px] font-mono tracking-[0.2em] text-[#777777] uppercase">
+              SAVATINGIZ HOZIRCHA BO‘SH.
+            </p>
+            <div className="pt-4">
+              <Link href="/shop">
+                <Button variant="primary" size="md">
+                  KATALOGNI KO‘RISH
+                </Button>
+              </Link>
+            </div>
           </div>
-          <div className="summary-row">
-            <span>{t('shippingCost')}:</span>
-            <span style={{ color: '#10b981', fontWeight: 800 }}>{t('freeShipping')}</span>
-          </div>
-          <div className="summary-row total">
-            <span>{t('cartTotal')}:</span>
-            <span style={{ color: 'var(--accent-gold)' }}>{totalPriceUzs.toLocaleString()} UZS</span>
-          </div>
+        ) : (
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-8">
+            <div className="lg:col-span-8 divide-y divide-[#D9D6CF]">
+              {items.map((item) => (
+                <div key={item.id} className="py-6 flex space-x-6">
+                  <div className="relative w-24 h-32 bg-[#EAE7DF] border border-[#D9D6CF] shrink-0 overflow-hidden">
+                    <Image
+                      src={item.product.image}
+                      alt={item.product.name}
+                      fill
+                      sizes="96px"
+                      className="object-contain p-2"
+                    />
+                  </div>
 
-          <div style={{ marginTop: '28px' }}>
-            <button className="btn btn-gold" style={{ width: '100%', fontSize: '13px' }} onClick={handleTelegramOrder}>
-              💬 Telegram orqali xarid qilish
-            </button>
+                  <div className="flex-1 flex flex-col justify-between">
+                    <div>
+                      <div className="flex justify-between items-start">
+                        <Link
+                          href={`/shop/${item.product.slug}`}
+                          className="text-[14px] font-medium tracking-wide uppercase text-[#111111] hover:text-[#777777] transition-colors"
+                        >
+                          {item.product.name}
+                        </Link>
+                        <span className="font-mono text-[14px] font-bold text-[#111111] ml-4">
+                          {formatPrice(item.product.price * item.quantity)}
+                        </span>
+                      </div>
+                      <div className="mt-2 flex items-center space-x-2">
+                        <span className="text-[11px] font-mono text-[#777777] uppercase">
+                          O‘LCHAM: {item.size}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between mt-4">
+                      <div className="flex items-center border border-[#111111] bg-transparent">
+                        <button
+                          onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                          className="p-1.5 hover:bg-[#D9D6CF]/50 transition-colors cursor-pointer"
+                          aria-label="Miqdorni kamaytirish"
+                        >
+                          <Minus className="w-3.5 h-3.5" />
+                        </button>
+                        <span className="px-3 text-[12px] font-mono">
+                          {item.quantity}
+                        </span>
+                        <button
+                          onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                          className="p-1.5 hover:bg-[#D9D6CF]/50 transition-colors cursor-pointer"
+                          aria-label="Miqdorni oshirish"
+                        >
+                          <Plus className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+
+                      <button
+                        onClick={() => removeItem(item.id)}
+                        className="text-[11px] font-mono tracking-wider text-[#777777] hover:text-[#111111] underline underline-offset-2 uppercase cursor-pointer"
+                      >
+                        O‘CHIRISH
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="lg:col-span-4 p-6 border border-[#D9D6CF] bg-[#EAE7DF]/40 space-y-6 self-start">
+              <span className="text-[12px] font-mono tracking-[0.2em] text-[#111111] uppercase block pb-3 border-b border-[#D9D6CF]">
+                XULOSA
+              </span>
+
+              <div className="flex justify-between items-baseline text-[13px] font-mono">
+                <span className="text-[#777777] uppercase">ORALIQ JAMI</span>
+                <span className="font-bold text-[#111111]">{formatPrice(subtotal)}</span>
+              </div>
+
+              <div className="flex justify-between items-baseline text-[13px] font-mono">
+                <span className="text-[#777777] uppercase">YETKAZIB BERISH</span>
+                <span className="text-[#111111]">{subtotal >= 800000 ? 'BEPUL' : '30 000 so‘m'}</span>
+              </div>
+
+              <div className="pt-4 border-t border-[#D9D6CF] flex justify-between items-baseline text-[15px] font-mono font-bold">
+                <span className="uppercase">JAMI</span>
+                <span>{formatPrice(subtotal >= 800000 ? subtotal : subtotal + 30000)}</span>
+              </div>
+
+              <Button
+                variant="primary"
+                size="lg"
+                fullWidth
+                onClick={openCart}
+              >
+                <span className="flex items-center space-x-2">
+                  <span>BUYURTMANI RASMIYLASHTIRISH</span>
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </span>
+              </Button>
+            </div>
           </div>
-        </div>
+        )}
       </div>
-    </div>
+    </PageTransition>
   );
 }

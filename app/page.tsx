@@ -1,199 +1,91 @@
-'use client';
-
+import React from 'react';
 import Link from 'next/link';
-import { useLanguage } from '@/context/LanguageContext';
-import ProductCard from '@/components/ProductCard';
-import { Product } from '@/types';
-
-const sampleProducts: Product[] = [
-  {
-    id: 'p1',
-    title: 'Suede Zip Shirt Cut II',
-    category: 'Kurtka & Palto',
-    priceUzs: 420000,
-    priceUsd: 36.00,
-    badge: 'Direct China',
-    badgeType: 'china',
-    image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80'
-  },
-  {
-    id: 'p2',
-    title: 'Loose Fit Burgundy Hoodie',
-    category: 'Xudi & Svitshotlar',
-    priceUzs: 310000,
-    priceUsd: 24.99,
-    badge: '-20% SALE',
-    badgeType: 'sale',
-    image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80'
-  },
-  {
-    id: 'p3',
-    title: 'Cropped Leather Biker Jacket',
-    category: 'Ayollar kiyimi',
-    priceUzs: 490000,
-    priceUsd: 42.00,
-    badge: 'Direct China',
-    badgeType: 'china',
-    image: 'https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?auto=format&fit=crop&w=600&q=80'
-  },
-  {
-    id: 'p4',
-    title: 'Soft Cotton Knit Polo Sweater',
-    category: 'Erkaklar kiyimi',
-    priceUzs: 240000,
-    priceUsd: 19.50,
-    image: 'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=600&q=80'
-  }
-];
+import { products } from '@/data/products';
+import ProductGrid from '@/components/ProductGrid';
+import PageTransition from '@/components/PageTransition';
+import { ArrowRight } from 'lucide-react';
 
 export default function HomePage() {
-  const { t } = useLanguage();
+  // Primary catalogue products for the home page showcase
+  const featuredProducts = products.slice(0, 6);
 
   return (
-    <div>
-      {/* Hero Showcase */}
-      <section className="hero-wrapper">
-        <div className="container">
-          <div className="hero-grid">
-            <div className="hero-content">
-              <div style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: 'var(--bg-card)',
-                border: '1px solid var(--border-subtle)',
-                padding: '6px 16px',
-                borderRadius: 'var(--radius-pill)',
-                fontSize: '12px',
-                fontWeight: 800,
-                letterSpacing: '1px',
-                textTransform: 'uppercase',
-                marginBottom: '24px',
-                boxShadow: 'var(--shadow-sm)'
-              }}>
-                <span style={{ color: 'var(--accent-gold)' }}>⚡ NEW ARRIVALS 2026</span>
-                <span style={{ opacity: 0.3 }}>|</span>
-                <span>{t('heroSubtitle')}</span>
-              </div>
-
-              <h1>
-                Eksklyuziv <span className="gradient-text">Kiyimlar</span> va Zamonaviy Stil.
-              </h1>
-
-              <p>{t('heroDesc')}</p>
-
-              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                <Link href="/shop" className="btn btn-primary">
-                  {t('heroShopBtn')} &rarr;
-                </Link>
-                <Link href="/about" className="btn btn-secondary">
-                  {t('heroAboutBtn')}
-                </Link>
-              </div>
-
-              <div className="hero-stats">
-                <div className="stat-item">
-                  <h4>10,000+</h4>
-                  <p>Mijozlarimiz</p>
-                </div>
-                <div className="stat-item">
-                  <h4>100%</h4>
-                  <p>Fabrika Sifati</p>
-                </div>
-                <div className="stat-item">
-                  <h4>1-3 Kun</h4>
-                  <p>Express Yetkazish</p>
-                </div>
-              </div>
+    <PageTransition className="w-full">
+      {/* Editorial Hero / Product Intro Section */}
+      <section className="w-full border-b border-[#D9D6CF] py-16 sm:py-24 lg:py-28">
+        <div className="w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="flex flex-col space-y-6">
+            <div className="flex items-center justify-between">
+              <span className="text-[11px] font-mono tracking-[0.25em] text-[#777777] uppercase">
+                01-TO‘PLAM / ARXIV
+              </span>
+              <span className="text-[11px] font-mono tracking-[0.25em] text-[#777777] uppercase hidden sm:inline">
+                CHIKAGO STUDIYASI
+              </span>
             </div>
 
-            <div className="hero-card-stack">
-              <div className="hero-main-card">
-                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=80" alt="Aurelin Fashion Model" />
-                <div className="hero-floating-glass">
-                  <div>
-                    <div style={{ fontFamily: 'var(--font-heading)', fontSize: '18px', fontWeight: 800 }}>Haute Outerwear 2026</div>
-                    <div style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>Direct Factory Shipment to Tashkent</div>
-                  </div>
-                  <Link href="/product-detail" className="btn btn-gold" style={{ padding: '10px 20px', fontSize: '12px' }}>
-                    Ko'rish
-                  </Link>
-                </div>
-              </div>
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-[0.08em] text-[#111111] uppercase leading-none max-w-4xl">
+              SCHAUBLETES
+              <br />
+              <span className="text-3xl sm:text-5xl lg:text-6xl font-light tracking-[0.14em] text-[#777777]">
+                CLOTHING &amp; CO.
+              </span>
+            </h1>
+
+            <div className="pt-4 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+              <p className="text-[13px] sm:text-[14px] text-[#777777] max-w-lg leading-relaxed uppercase tracking-[0.05em]">
+                Og‘ir to‘qimali matolar, sezilarli grafikalar va aniq siluetlarga
+                ega premium ko‘cha kiyimlarini yaratuvchi mustaqil brend.
+              </p>
+
+              <Link
+                href="/shop"
+                className="group inline-flex items-center space-x-2 text-[12px] font-medium tracking-[0.2em] uppercase text-[#111111] hover:text-[#777777] transition-colors border-b border-[#111111] pb-1 self-start sm:self-auto"
+              >
+                <span>TO‘LIQ KATALOGNI KO‘RISH</span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Categories Grid */}
-      <section style={{ padding: '64px 0', borderTop: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)', background: 'var(--bg-card)' }}>
-        <div className="container">
-          <div className="section-header">
-            <span className="section-tag">CATEGORIES</span>
-            <h2 className="section-title">Aurelin Kiyim To'plamlari</h2>
+      {/* Catalogue Grid Section */}
+      <section className="w-full py-16 sm:py-24">
+        <div className="w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          {/* Sub-header / Catalogue metadata */}
+          <div className="flex items-baseline justify-between border-b border-[#D9D6CF] pb-4 mb-12 sm:mb-16">
+            <span className="text-[12px] font-semibold tracking-[0.2em] uppercase text-[#111111]">
+              SARALANGAN KIYIMLAR
+            </span>
+            <span className="text-[11px] font-mono tracking-widest text-[#777777] uppercase">
+              BARCHA {products.length} TA USLUBDAN 6 TASI KO‘RSATILMOQDA
+            </span>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px' }}>
-            <Link href="/shop" style={{ position: 'relative', height: '320px', borderRadius: 'var(--radius-md)', overflow: 'hidden', display: 'flex', alignItems: 'flex-end', padding: '24px', color: '#fff' }}>
-              <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=600&q=80" alt="Erkaklar" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%)' }}></div>
-              <div style={{ position: 'relative', zIndex: 2 }}>
-                <div style={{ fontFamily: 'var(--font-heading)', fontSize: '22px', fontWeight: 800 }}>{t('catMen')}</div>
-                <span style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--accent-gold)' }}>Ko'rish &rarr;</span>
-              </div>
-            </Link>
+          {/* Product Grid */}
+          <ProductGrid products={featuredProducts} />
 
-            <Link href="/shop" style={{ position: 'relative', height: '320px', borderRadius: 'var(--radius-md)', overflow: 'hidden', display: 'flex', alignItems: 'flex-end', padding: '24px', color: '#fff' }}>
-              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80" alt="Ayollar" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%)' }}></div>
-              <div style={{ position: 'relative', zIndex: 2 }}>
-                <div style={{ fontFamily: 'var(--font-heading)', fontSize: '22px', fontWeight: 800 }}>{t('catWomen')}</div>
-                <span style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--accent-gold)' }}>Ko'rish &rarr;</span>
-              </div>
-            </Link>
-
-            <Link href="/shop" style={{ position: 'relative', height: '320px', borderRadius: 'var(--radius-md)', overflow: 'hidden', display: 'flex', alignItems: 'flex-end', padding: '24px', color: '#fff' }}>
-              <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" alt="Xudi" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%)' }}></div>
-              <div style={{ position: 'relative', zIndex: 2 }}>
-                <div style={{ fontFamily: 'var(--font-heading)', fontSize: '22px', fontWeight: 800 }}>{t('catHoodies')}</div>
-                <span style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--accent-gold)' }}>Ko'rish &rarr;</span>
-              </div>
-            </Link>
-
-            <Link href="/shop" style={{ position: 'relative', height: '320px', borderRadius: 'var(--radius-md)', overflow: 'hidden', display: 'flex', alignItems: 'flex-end', padding: '24px', color: '#fff' }}>
-              <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80" alt="Kurtka" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%)' }}></div>
-              <div style={{ position: 'relative', zIndex: 2 }}>
-                <div style={{ fontFamily: 'var(--font-heading)', fontSize: '22px', fontWeight: 800 }}>{t('catJackets')}</div>
-                <span style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--accent-gold)' }}>Ko'rish &rarr;</span>
-              </div>
-            </Link>
+          {/* Editorial Interlude / Statement */}
+          <div className="mt-20 sm:mt-28 py-16 sm:py-24 border-y border-[#D9D6CF] text-center flex flex-col items-center">
+            <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#777777] mb-4">
+              EDITORIAL BAYONOT
+            </span>
+            <blockquote className="text-xl sm:text-2xl lg:text-3xl font-light tracking-[0.08em] text-[#111111] uppercase max-w-3xl leading-relaxed">
+              &ldquo;BIZNING DIZAYNIMIZ QAT‘IY SODDALIKKA ASOSLANGAN BO‘LIB, CHIKAGODA
+              ENG SARALANGAN PAXTA MATOLARIDAN TIKILADI.&rdquo;
+            </blockquote>
+            <div className="mt-8">
+              <Link
+                href="/shop"
+                className="inline-flex items-center justify-center px-8 py-4 bg-[#111111] text-[#F5F3EE] hover:bg-black text-[12px] font-medium tracking-[0.2em] uppercase transition-all duration-300 hover:tracking-[0.25em]"
+              >
+                TO‘LIQ ARXIVNI KO‘ZDATAN KECHIRISH
+              </Link>
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Best Sellers Grid */}
-      <section style={{ padding: '96px 0' }}>
-        <div className="container">
-          <div className="section-header">
-            <span className="section-tag">BESTSELLERS</span>
-            <h2 className="section-title">Ommabop Kiyimlar Katalogi</h2>
-          </div>
-
-          <div className="product-grid">
-            {sampleProducts.map((p) => (
-              <ProductCard key={p.id} product={p} />
-            ))}
-          </div>
-
-          <div style={{ textAlign: 'center', marginTop: '56px' }}>
-            <Link href="/shop" className="btn btn-outline" style={{ padding: '16px 48px' }}>
-              Barcha kiyimlarni ko'rish &rarr;
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+    </PageTransition>
   );
 }
