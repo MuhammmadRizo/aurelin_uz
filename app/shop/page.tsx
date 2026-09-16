@@ -7,7 +7,7 @@ import PageTransition from '@/components/PageTransition';
 export const metadata: Metadata = {
   title: 'Barcha kiyimlar katalogi',
   description:
-    'Schaubletes og‘ir svtishertlari, minimalistik futbolkalari va texnik ustki kiyimlari to‘liq katalogini kashf eting.',
+    'AURELIN og‘ir svtishertlari, minimalistik futbolkalari va texnik ustki kiyimlari to‘liq katalogini kashf eting.',
 };
 
 export default function ShopPage() {

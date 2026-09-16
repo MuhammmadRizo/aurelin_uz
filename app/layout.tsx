@@ -13,15 +13,15 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://schaubletes.com'),
+  metadataBase: new URL('https://aurelin.uz'),
   title: {
-    default: 'SCHAUBLETES — Clothing & Co.',
-    template: '%s | SCHAUBLETES',
+    default: 'AURELIN — Clothing & Co.',
+    template: '%s | AURELIN',
   },
   description:
-    'Schaubletes Clothing & Co. — zamonaviy ko‘cha modasi, premium kiyim-kechaklar va cheklangan to‘plamlar.',
+    'AURELIN Clothing & Co. — zamonaviy ko‘cha modasi, premium kiyim-kechaklar va cheklangan to‘plamlar.',
   keywords: [
-    'Schaubletes',
+    'AURELIN',
     'Streetwear',
     'Kiyim-kechak',
     'Svtishertlar',
@@ -29,22 +29,22 @@ export const metadata: Metadata = {
     'Chikago',
     'Minimalistik liboslar',
   ],
-  authors: [{ name: 'Schaubletes Clothing & Co.' }],
-  creator: 'Schaubletes Clothing & Co.',
+  authors: [{ name: 'AURELIN Clothing & Co.' }],
+  creator: 'AURELIN Clothing & Co.',
   openGraph: {
-    title: 'SCHAUBLETES — Clothing & Co.',
+    title: 'AURELIN — Clothing & Co.',
     description:
-      'Schaubletes Clothing & Co. — zamonaviy ko‘cha modasi, premium kiyim-kechaklar va cheklangan to‘plamlar.',
-    url: 'https://schaubletes.com',
-    siteName: 'SCHAUBLETES',
+      'AURELIN Clothing & Co. — zamonaviy ko‘cha modasi, premium kiyim-kechaklar va cheklangan to‘plamlar.',
+    url: 'https://AURELIN.com',
+    siteName: 'AURELIN',
     locale: 'uz_UZ',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SCHAUBLETES — Clothing & Co.',
+    title: 'AURELIN — Clothing & Co.',
     description:
-      'Schaubletes Clothing & Co. — zamonaviy ko‘cha modasi, premium kiyim-kechaklar va cheklangan to‘plamlar.',
+      'AURELIN Clothing & Co. — zamonaviy ko‘cha modasi, premium kiyim-kechaklar va cheklangan to‘plamlar.',
   },
   icons: {
     icon: '/favicon.ico',

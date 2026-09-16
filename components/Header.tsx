@@ -23,7 +23,7 @@ export default function Header() {
 
   const navLinks = [
     { label: "DO'KON", href: '/shop' },
-    { label: 'BIZ HAQIMIZDA', href: '/about' },
+    // { label: 'BIZ HAQIMIZDA', href: '/about' },
   ];
 
   return (
@@ -43,7 +43,7 @@ export default function Header() {
               className="flex flex-col group text-left focus-visible:outline-none"
             >
               <span className="text-[14px] sm:text-[15px] font-bold tracking-[0.28em] text-[#111111] transition-transform duration-300 group-hover:opacity-80">
-                SCHAUBLETES
+                AURELIN
               </span>
               <span className="text-[9px] sm:text-[10px] tracking-[0.38em] text-[#777777] uppercase font-medium">
                 CLOTHING &amp; CO.

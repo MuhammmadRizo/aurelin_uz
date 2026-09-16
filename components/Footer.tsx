@@ -26,19 +26,17 @@ export default function Footer() {
           <div className="md:col-span-5 flex flex-col justify-between">
             <div>
               <span className="text-[13px] font-bold tracking-[0.25em] text-[#111111] uppercase block">
-                SCHAUBLETES CLOTHING &amp; CO.
+                AURELIN CLOTHING &amp; CO.
               </span>
               <p className="mt-4 text-[13px] leading-relaxed text-[#777777] max-w-sm">
                 Ifodali, minimalistik ko‘cha modasi va puxta o‘ylangan kiyim-kechaklarga
-                yo‘naltirilgan zamonaviy mustaqil brend. Chikago (Illinoys, AQSh)
-                studiyasida mehr bilan tayyorlangan va jamlangan.
+                yo‘naltirilgan zamonaviy brendlar to‘plami.
               </p>
             </div>
 
             <div className="mt-8 text-[12px] font-medium tracking-[0.15em] text-[#111111] uppercase flex items-center space-x-2">
-              <span>CHIKAGODA</span>
-              <span className="text-red-600">❤</span>
-              <span>BILAN TAYYORLANGAN</span>
+              <span>XITOY</span>
+              <span>KIYIMLARI SIZ UCHUN</span>
             </div>
           </div>
 
@@ -53,14 +51,14 @@ export default function Footer() {
             >
               DO‘KON
             </Link>
-            <Link
+            {/* <Link
               href="/about"
               className="text-[12px] tracking-[0.2em] uppercase text-[#111111] hover:text-[#777777] transition-colors py-0.5"
             >
               BIZ HAQIMIZDA
-            </Link>
+            </Link> */}
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/aurelin.uz/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[12px] tracking-[0.2em] uppercase text-[#111111] hover:text-[#777777] transition-colors py-0.5"
@@ -68,7 +66,7 @@ export default function Footer() {
               INSTAGRAM
             </a>
             <a
-              href="mailto:studio@schaubletes.com"
+              href="https://t.me/Kimsanboyevkx"
               className="text-[12px] tracking-[0.2em] uppercase text-[#111111] hover:text-[#777777] transition-colors py-0.5"
             >
               BOG‘LANISH
@@ -115,16 +113,13 @@ export default function Footer() {
         {/* Large Editorial Brand Wordmark Treatment (English brand name preserved) */}
         <div className="pt-12 pb-6 flex flex-col items-center select-none overflow-hidden">
           <span className="text-[11vw] leading-none font-bold tracking-[0.18em] text-[#111111]/90 uppercase text-center block w-full whitespace-nowrap pl-[0.18em]">
-            SCHAUBLETES
-          </span>
-          <span className="text-[11px] sm:text-[13px] tracking-[0.45em] text-[#777777] uppercase mt-4 text-center">
-            CLOTHING &amp; CO. — CHIKAGO STUDIYASI ARXIVI
+            AURELIN
           </span>
         </div>
 
         {/* Bottom copyright line */}
         <div className="pt-8 mt-4 border-t border-[#D9D6CF]/50 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#777777] tracking-[0.15em] uppercase gap-4">
-          <div>© {new Date().getFullYear()} SCHAUBLETES. BARCHA HUQUQLAR HIMOYALANGAN.</div>
+          <div>© {new Date().getFullYear()} AURELIN. BARCHA HUQUQLAR HIMOYALANGAN.</div>
           <div className="flex space-x-6">
             <span className="hover:text-[#111111] cursor-pointer">MAXFIYLIK SIYOSATI</span>
             <span className="hover:text-[#111111] cursor-pointer">FOYDALANISH SHARTLARI</span>

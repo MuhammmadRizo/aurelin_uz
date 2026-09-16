@@ -45,7 +45,7 @@ export default function MobileMenu({
               className="flex flex-col group text-left"
             >
               <span className="text-[13px] font-semibold tracking-[0.25em] text-[#111111]">
-                SCHAUBLETES
+                AURELIN
               </span>
               <span className="text-[9px] tracking-[0.3em] text-[#777777]">
                 CLOTHING &amp; CO.
@@ -120,7 +120,7 @@ export default function MobileMenu({
           <div className="pt-6 border-t border-[#D9D6CF] flex flex-col space-y-3">
             <div className="flex justify-between text-[11px] tracking-[0.15em] text-[#777777] uppercase">
               <span>TELEGRAM: @AURELIN_UZ</span>
-              <span>© {new Date().getFullYear()} SCHAUBLETES</span>
+              <span>© {new Date().getFullYear()} AURELIN</span>
             </div>
             <div className="text-[10px] tracking-[0.2em] text-[#777777] uppercase">
               SEVGI BILAN TAYYORLANGAN

@@ -8,7 +8,7 @@ import { ArrowRight } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Biz haqimizda',
   description:
-    'Schaubletes Clothing & Co. — Chikagoda joylashgan ifodali, minimalistik ko‘cha modasi va puxta o‘ylangan kiyim-kechaklarga ixtisoslashgan zamonaviy mustaqil brend.',
+    'AURELIN Clothing & Co. — Chikagoda joylashgan ifodali, minimalistik ko‘cha modasi va puxta o‘ylangan kiyim-kechaklarga ixtisoslashgan zamonaviy mustaqil brend.',
 };
 
 export default function AboutPage() {
@@ -18,11 +18,11 @@ export default function AboutPage() {
         {/* Intro Header */}
         <div className="border-b border-[#D9D6CF] pb-16">
           <span className="text-[11px] font-mono tracking-[0.3em] text-[#777777] uppercase block mb-6">
-            BIZ HAQIMIZDA / SCHAUBLETES
+            BIZ HAQIMIZDA / AURELIN
           </span>
 
           <h1 className="text-4xl sm:text-6xl font-bold tracking-[0.06em] text-[#111111] uppercase leading-none">
-            SCHAUBLETES
+            AURELIN
             <br />
             <span className="text-2xl sm:text-4xl font-light tracking-[0.14em] text-[#777777]">
               CLOTHING &amp; CO.
@@ -41,7 +41,7 @@ export default function AboutPage() {
             <div className="relative w-48 h-48 bg-[#EAE7DF] border border-[#D9D6CF] flex items-center justify-center p-6">
               <Image
                 src="/images/products/brand-logo.png"
-                alt="Schaubletes SC&C brend emblemasi"
+                alt="AURELIN SC&C brend emblemasi"
                 width={160}
                 height={160}
                 className="object-contain"
@@ -79,7 +79,7 @@ export default function AboutPage() {
             <div className="md:col-span-8 space-y-4 text-[14px] leading-relaxed text-[#555555]">
               <p>
                 Biz an‘anaviy mavsumiy taqvimlarga yoki o‘tkinchi mikro-trendlarga
-                ergashmaymiz. Schaubletes katalogidagi har bir buyum qulaylik va dadil
+                ergashmaymiz. AURELIN katalogidagi har bir buyum qulaylik va dadil
                 tipografik ifoda o‘rtasidagi uzluksiz uyg‘unlik sifatida yaratiladi.
               </p>
               <p>
@@ -128,7 +128,7 @@ export default function AboutPage() {
             </div>
             <div className="md:col-span-8 space-y-4 text-[14px] leading-relaxed text-[#555555]">
               <p>
-                Schaubletes vizual tili Shveytsariya grafik aniqligi hamda Amerika
+                AURELIN vizual tili Shveytsariya grafik aniqligi hamda Amerika
                 o‘rta-g‘arbiy ko‘cha madaniyatini o‘zida mujassamlashtiradi.
                 Tipografiyamizda yuqori kontrastli grotesk shriftlar, hisoblangan
                 bo‘shliqlar va vazmin ifoda ustuvorlik qiladi.
@@ -164,21 +164,21 @@ export default function AboutPage() {
                     BUYURTMA VA SAVOLLAR
                   </span>
                   <a
-                    href="mailto:orders@schaubletes.com"
+                    href="https://t.me/Kimsanboyevkx"
                     className="text-[#111111] hover:underline"
                   >
-                    ORDERS@SCHAUBLETES.COM
+                    @Kimsanboyevkx
                   </a>
                 </div>
 
-                <div>
+                {/* <div>
                   <span className="text-[#777777] block text-[10px] mb-1">
                     STUDIYA MANZILI
                   </span>
                   <span className="text-[#111111] block">
                     WEST LOOP / CHIKAGO, IL, AQSH
                   </span>
-                </div>
+                </div> */}
               </div>
 
               <div className="pt-6">
