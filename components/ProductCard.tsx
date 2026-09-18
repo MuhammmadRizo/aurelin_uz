@@ -20,7 +20,10 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
         aria-label={`${product.name} tafsilotlarini ko‘rish`}
       >
         {/* Product Image Container with 4:5 Aspect Ratio */}
-        <div className="relative w-full aspect-[4/5] bg-[#EAE7DF] overflow-hidden border border-[#D9D6CF]/60 transition-colors duration-500 group-hover:border-[#111111]/40">
+        <div
+          data-cursor="drag"
+          className="relative w-full aspect-[4/5] bg-[#EAE7DF] overflow-hidden border border-[#D9D6CF]/60 transition-colors duration-500 group-hover:border-[#111111]/40"
+        >
           <Image
             src={product.image}
             alt={product.name}

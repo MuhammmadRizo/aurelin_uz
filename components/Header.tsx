@@ -78,6 +78,7 @@ export default function Header() {
           <div className="flex items-center space-x-5 sm:space-x-8">
             <button
               onClick={openCart}
+              data-cursor="cart"
               className="group flex items-center space-x-2 text-[#111111] hover:text-[#777777] transition-colors cursor-pointer text-[12px] font-medium tracking-[0.2em] uppercase py-2 focus-visible:outline-none"
               aria-label={`Xarid savati: ${totalCount} ta mahsulot`}
             >

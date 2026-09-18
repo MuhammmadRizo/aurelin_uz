@@ -99,7 +99,10 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
         {/* LEFT: Product Image Gallery (approx 60% = 7 cols on lg) */}
         <div className="lg:col-span-7 flex flex-col space-y-4">
           {/* Main Large Image Container (4:5 aspect ratio) */}
-          <div className="relative w-full aspect-[4/5] bg-[#EAE7DF] border border-[#D9D6CF]/70 overflow-hidden flex items-center justify-center">
+          <div
+            data-cursor="drag"
+            className="relative w-full aspect-[4/5] bg-[#EAE7DF] border border-[#D9D6CF]/70 overflow-hidden flex items-center justify-center"
+          >
             <Image
               src={galleryImages[selectedImage]}
               alt={`${product.name} — ko‘rinish ${selectedImage + 1}`}
@@ -229,6 +232,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                 size="lg"
                 fullWidth
                 onClick={handleAddToCart}
+                data-cursor="cart"
                 className="h-12"
               >
                 {isAdded ? (

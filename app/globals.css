@@ -76,6 +76,21 @@ input:focus-visible {
   color: #f5f3ee;
 }
 
+/* Custom Cursor styles - only applied on fine pointer devices (desktop mouse) */
+@media (hover: hover) and (pointer: fine) {
+  html,
+  body,
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  label,
+  [role="button"] {
+    cursor: none !important;
+  }
+}
+
 /* Image aspect ratio container helper */
 .aspect-product {
   aspect-ratio: 4 / 5;

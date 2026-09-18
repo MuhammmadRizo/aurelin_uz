@@ -24,6 +24,7 @@ export default function ProductImage({
 
   return (
     <div
+      data-cursor="drag"
       className={cn(
         'relative w-full aspect-[4/5] bg-[#EFECE6] overflow-hidden flex items-center justify-center',
         className
