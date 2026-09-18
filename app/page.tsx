@@ -15,14 +15,11 @@ export default function HomePage() {
       <section className="w-full border-b border-[#D9D6CF] py-16 sm:py-24 lg:py-28">
         <div className="w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="flex flex-col space-y-6">
-            {/* <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between">
               <span className="text-[11px] font-mono tracking-[0.25em] text-[#777777] uppercase">
-                01-TO‘PLAM / ARXIV
+                WEBSITE Kerakmi —  <Link href={"https://t.me/rizo_adilov"} target='_blank'>@rizo_adilov</Link>
               </span>
-              <span className="text-[11px] font-mono tracking-[0.25em] text-[#777777] uppercase hidden sm:inline">
-                CHIKAGO STUDIYASI
-              </span>
-            </div> */}
+            </div>
 
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-[0.08em] text-[#111111] uppercase leading-none max-w-4xl">
               AURELIN

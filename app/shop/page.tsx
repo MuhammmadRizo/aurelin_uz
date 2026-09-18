@@ -12,6 +12,11 @@ export const metadata: Metadata = {
 
 export default function ShopPage() {
   const categories = getAllCategories();
+  const featured = products.filter((p) => p.featured);
+  const nonFeatured = [...products].reverse().filter((p) => !p.featured);
+  const sortedProducts = [...featured, ...nonFeatured];
+
+
 
   return (
     <PageTransition className="w-full py-12 sm:py-20">
@@ -43,6 +48,7 @@ export default function ShopPage() {
           }
         >
           <ShopCatalog initialProducts={products} categories={categories} />
+          {/* <ShopCatalog initialProducts={sortedProducts} categories={categories} /> */}
         </Suspense>
       </div>
     </PageTransition>

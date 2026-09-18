@@ -1,12 +1,12 @@
-import React from 'react';
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import PageTransition from '@/components/PageTransition';
-import { ArrowLeft, Mail, MapPin } from 'lucide-react';
+import React from "react";
+import type { Metadata } from "next";
+import Link from "next/link";
+import PageTransition from "@/components/PageTransition";
+import { ArrowLeft, Mail, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: 'Bog‘lanish va Studiya',
-  description: 'AURELIN Clothing & Co bilan bog‘lanish.',
+  title: "Bog‘lanish va Studiya",
+  description: "AURELIN Clothing & Co bilan bog‘lanish.",
 };
 
 export default function ContactPage() {
@@ -28,12 +28,23 @@ export default function ContactPage() {
             BOG‘LANISH
           </span>
           <h1 className="text-4xl sm:text-6xl font-bold tracking-[0.08em] text-[#111111] uppercase">
-            CHIKAGO STUDIYASI
+            AURELIN
           </h1>
           <p className="text-[14px] text-[#777777] max-w-xl leading-relaxed">
             Kiyim relizlari, bichim xususiyatlari, buyurtmalarni yetkazish yoki
             hamkorlik loyihalari bo‘yicha murojaat qiling.
           </p>
+          <Link href="https://t.me/Kimsanboyevkx">
+            <span className="telegram_gradient-color">
+              Telegram: @Kimsanboyevkx
+            </span>
+          </Link>{" "}
+          <br />
+          <Link href="https://t.me/Kimsanboyevkx">
+            <span className="insta_gradient-color">
+              Instagram: @Kimsanboyevkx
+            </span>
+          </Link>
         </div>
       </div>
     </PageTransition>

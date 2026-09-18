@@ -64,8 +64,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uz" className={geistSans.variable}>
-      <body className="min-h-screen flex flex-col bg-[#F5F3EE] text-[#111111] antialiased selection:bg-[#111111] selection:text-[#F5F3EE]">
+    <html lang="uz" className={geistSans.variable} suppressHydrationWarning>
+      <body
+        className="min-h-screen flex flex-col bg-[#F5F3EE] text-[#111111] antialiased selection:bg-[#111111] selection:text-[#F5F3EE]"
+        suppressHydrationWarning
+      >
         <CartProvider>
           <Header />
           <main className="flex-1 w-full flex flex-col">

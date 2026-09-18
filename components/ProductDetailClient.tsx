@@ -13,6 +13,55 @@ interface ProductDetailClientProps {
   product: Product;
 }
 
+function renderDetailContent(detail: string) {
+  const colonIndex = detail.indexOf(':');
+  if (colonIndex === -1) {
+    return <span>{detail}</span>;
+  }
+
+  const label = detail.slice(0, colonIndex + 1);
+  const rawValue = detail.slice(colonIndex + 1).trim();
+
+  let url: string | null = null;
+
+  if (rawValue.includes('@aurelin.uz')) {
+    url = 'https://www.instagram.com/aurelin.uz/';
+  } else if (rawValue.includes('@aurelin_uz_atziv')) {
+    url = 'https://t.me/aurelin_uz_atziv';
+  } else if (rawValue.includes('@Kimsanboyevkx')) {
+    url = 'https://t.me/Kimsanboyevkx';
+  } else {
+    const match = rawValue.match(/@([a-zA-Z0-9_.]+)/);
+    if (match) {
+      const handle = match[1];
+      if (label.toLowerCase().includes('instagram')) {
+        url = `https://www.instagram.com/${handle}/`;
+      } else {
+        url = `https://t.me/${handle}`;
+      }
+    }
+  }
+
+  if (url) {
+    return (
+      <span>
+        {label}{' '}
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#111111] font-medium underline underline-offset-2 decoration-[#B5B2AA] hover:decoration-[#111111] hover:text-black transition-colors inline-flex items-center gap-0.5"
+        >
+          {rawValue}
+          <span className="text-[10px] text-[#777777] leading-none select-none">↗</span>
+        </a>
+      </span>
+    );
+  }
+
+  return <span>{detail}</span>;
+}
+
 export default function ProductDetailClient({ product }: ProductDetailClientProps) {
   const { addItem } = useCart();
 
@@ -204,7 +253,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                 {product.details.map((detail, idx) => (
                   <li key={idx} className="flex items-start space-x-2">
                     <span className="text-[#111111] mt-0.5">•</span>
-                    <span>{detail}</span>
+                    {renderDetailContent(detail)}
                   </li>
                 ))}
               </ul>

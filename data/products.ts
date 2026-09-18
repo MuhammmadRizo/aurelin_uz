@@ -19,7 +19,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -53,7 +53,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -86,7 +86,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -99,7 +99,7 @@ export const products: Product[] = [
       "2XL",
       "3XL"
     ],
-    "featured": true,
+    "featured": false,
     "label": "YANGI TO‘PLAM"
   },
   {
@@ -120,7 +120,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -154,7 +154,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -188,7 +188,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -201,7 +201,7 @@ export const products: Product[] = [
       "3XL",
       "4XL"
     ],
-    "featured": true,
+    "featured": false,
     "label": "KATTA O‘LCHAMLAR"
   },
   {
@@ -222,7 +222,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -255,7 +255,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -287,7 +287,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -321,7 +321,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -354,7 +354,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -387,7 +387,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -420,7 +420,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -453,7 +453,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -486,7 +486,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -520,7 +520,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -552,7 +552,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -564,7 +564,7 @@ export const products: Product[] = [
       "2XL",
       "3XL"
     ],
-    "featured": false,
+    "featured": true,
     "label": "POLO SVITER"
   },
   {
@@ -585,7 +585,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -618,7 +618,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -652,7 +652,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -685,7 +685,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -718,7 +718,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -750,7 +750,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -783,7 +783,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -816,7 +816,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -849,7 +849,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -883,7 +883,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -917,7 +917,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -950,7 +950,7 @@ export const products: Product[] = [
       "Yetkazib berish muddati: 8–12 kun",
       "Kargo xizmati narxi: 100g = $1",
       "To‘lov sharti: 75% oldindan to‘lov",
-      "Buyurtma va murojaat: Telegram @Kimsanboyevkx",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
       "Instagram sahifa: @aurelin.uz",
       "Xaridorlar fikrlari: @aurelin_uz_atziv"
     ],
@@ -964,7 +964,40 @@ export const products: Product[] = [
     ],
     "featured": false,
     "label": "HENLI"
-  }
+  },
+  {
+    "id": "aurelin-33",
+    "slug": "aurelin-tactical-streetwear-look",
+    "name": "Aurelin Tactical Streetwear Look",
+    "category": "LOOK TO'PLAMLAR",
+    "price": 199000,
+    "image": "/images/products/aurelin/aurelin-33-1.jpg",
+    "gallery": [
+      "/images/products/aurelin/aurelin-33-1.jpg",
+      "/images/products/aurelin/aurelin-33-2.jpg"
+    ],
+    "description": "Qulay cho‘ntaklar va funksional detallarga ega zamonaviy taktik uslubdagi komplekt.",
+    "details": [
+      "Xitoyning sara fabrikalaridan to‘g‘ridan-to‘g‘ri olib kelinadi",
+      "Yetkazib berish muddati: 8–12 kun",
+      "Kargo xizmati narxi: 100g = $1",
+      "To‘lov sharti: 75% oldindan to‘lov",
+      "Buyurtma va murojaat: @Kimsanboyevkx",
+      "Instagram sahifa: @aurelin.uz",
+      "Xaridorlar fikrlari: @aurelin_uz_atziv"
+    ],
+    "composition": "Zich paxta va poliester",
+    "sizes": [
+      "M",
+      "L",
+      "XL",
+      "2XL",
+      "3XL",
+      "4XL"
+    ],
+    "featured": false,
+    "label": "YANGI TO‘PLAM"
+  },
 ];
 
 export function getProductBySlug(slug: string): Product | undefined {
